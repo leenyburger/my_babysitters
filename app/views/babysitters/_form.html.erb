@@ -1,0 +1,17 @@
+<%= form_with(model: babysitter, local: true) do |form| %>
+  <% if babysitter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(babysitter.errors.count, "error") %> prohibited this babysitter from being saved:</h2>
+
+      <ul>
+        <% babysitter.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
