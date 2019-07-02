@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+20.times do
+  Babysitter.create(name: Faker::Name.name, phone_number: Faker::PhoneNumber.phone_number)
+end
+
+10.times do
+  Parent.create(name: Faker::Name.name, phone_number: Faker::PhoneNumber.phone_number)
+end
